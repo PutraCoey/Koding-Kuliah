@@ -1,0 +1,14 @@
+public class ArrayDemo01{
+	public static void main (String[]args){
+		//deklarasi
+		int []arr;
+		//inisialisasi
+		arr=new int [5];
+		//assignmen
+		arr[0]=100;
+		arr[4]=30;
+		//menampilkan isi array
+		System.out.println("Isi Array ke 0 "+arr[0]);
+		System.out.println("Isi Array ke 1 "+arr[1]);
+	}
+}
