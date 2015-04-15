@@ -1,0 +1,34 @@
+import java.util.*;
+public class TebakAngkaGambarV2{
+	public static void main (String []args){
+		
+		Scanner input = new Scanner(System.in);
+		String []label={"GAMBAR", "ANGKA"};
+		int []nilai={0,0};
+		//lakukan 12x lempar koin
+		System.out.println("Ke\t| Hasil Lemparan");
+		System.out.println("-------------------------");
+		for(int i=0; i<12;i++){
+			int r=(int)(Math.random()+0.5);
+			System.out.println((i+1) + "\t|\t" + label[r]);
+			nilai[r]++;
+		}
+		System.out.println("-------------------------");
+		//hitung nilai 0 - gambar nilai 1 angka
+		//tampilkan total nilai gambar dan angka
+		for(int i=0; i<label.length; i++){
+			System.out.println("Nilai "+ label[i] + "=" +nilai[i]);
+		}
+		
+		//cetak kesimpulannya siapa yang menang
+		if (nilai[0]>nilai[1]){
+			System.out.print("Gambar Menang");
+		}
+		else if (nilai[0]<nilai[1]){
+			System.out.print("Angka Menang");
+		}
+		else (nilai[0]==nilai[1]){
+			System.out.print("----S E R I----");
+		}
+	}
+}
