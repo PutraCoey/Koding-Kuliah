@@ -1,0 +1,37 @@
+public class ArrayDemo03{
+	public static void main(String []args){
+		int[]dRandom = new int[20];
+		double rataRata=0.0;
+		int min = 100;
+		int max = 0;
+		int sum = 0;
+		int count = 0;
+		System.out.println("Mengisi dRandom dengan 10 bilangan random");
+		for(int i = 0; i<dRandom.length;i++){
+			dRandom[i] =(int)(Math.random()*100.0);
+			if(dRandom[i]<min){
+				min = dRandom[i];
+			}else if (dRandom[i]>max){
+				max = dRandom[i];
+			}
+			sum+=dRandom[i];
+			count++;
+		}
+		System.out.println("Menampilkan hasil bilangan random dalam array");
+		for(int j=0; j<dRandom.length; j++){
+			System.out.println("Data random ke ["+j+"]="+dRandom[j]);
+		}
+		rataRata = (double)sum/20;
+		System.out.println("Rata - rata = "+rataRata);
+		System.out.println("Bilangan Terbesar = "+max);
+		System.out.println("Bilangan Terkecil = "+min);
+		//view horizontal bargraph
+		for(int i=0;i<dRandom.length;i++){
+			System.out.print(i+"\t|");
+			for(int j=0;j<dRandom[i];j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
